@@ -1,3 +1,4 @@
+<?php $thisPage="AI-Article"; ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,25 +6,7 @@
 		<title>Michael Ducey's Personal Website</title>
 	</head>
 	<body>
-	<ul class="topnav">
-		<font size="1">
-		<h1>Pages</h1>
-			<font size="2">
-  		<li><a href="http://mikeducey.omahacodeschool.com/">Home</a></li>
-  		<li><a href="http://mikeducey.omahacodeschool.com/goals.html">Goals</a></li>
-  		<li><a href="http://mikeducey.omahacodeschool.com/gftrain.html">Just look at this guy: George Francis Train!</a></li>
-  		<font size="1">
-  		<h1>Articles</h1>
-			<font size="2">
-		<li><p style="color:black;">Artificial Intelligence: Heading Towards &quotCan Implies Ought&quot?</p></li>
-		<li><a href="http://mikeducey.omahacodeschool.com/articles/web-as-medium.html">The Web: The Ultimate Medium</a></li>
-		<h1>My profiles</h1>
-			<font size="2">
-		<li><a href="https://www.linkedin.com/in/michael-ducey-54077210a">LinkedIn</a></li>
-		<li><a href="https://github.com/mikeducey/">GitHub</a></li>
-		<a href=“mailto:michaeljducey@gmail.com”>Contact Me!</a>
-
-	</ul>
+	<?php include("../navigation.php"); ?>
 	<center>
 	<h3>Artificial Intelligence: Heading Towards &quotCan Implies Ought&quot?</h3>
 	</center>

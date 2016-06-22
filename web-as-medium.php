@@ -1,3 +1,4 @@
+<?php $thisPage="Web As Medium"; ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,28 +6,9 @@
 		<title>Michael Ducey's Personal Website</title>
 	</head>
 	<body>
-	<ul class="topnav">
-		<font size="1">
-		<h1>Pages</h1>
-			<font size="2">
-  		<li><a href="http://mikeducey.omahacodeschool.com/">Home</a></li>
-  		<li><a href="http://mikeducey.omahacodeschool.com/goals.html">Goals</a></li>
-  		<li><a href="http://mikeducey.omahacodeschool.com/gftrain.html">Just look at this guy: George Francis Train!</a></li>
-  		<font size="1">
-  		<h1>Articles</h1>
-			<font size="2">
-		<li><a href="http://mikeducey.omahacodeschool.com/articles/article-on-ai.html">Artificial Intelligence: Heading Towards &quotCan Implies Ought&quot?</a></li>
-		<li><p style="color:black;">The Web: the Ultimate Medium</p></li>
-		<font size="1">
-		<h1>My profiles</h1>
-			<font size="2">
-		<li><a href="https://www.linkedin.com/in/michael-ducey-54077210a">LinkedIn</a></li>
-		<li><a href="https://github.com/mikeducey/">GitHub</a></li>
-		<a href=“mailto:michaeljducey@gmail.com”>Contact Me!</a>
-
-	</ul>
+	<?php include("../navigation.php"); ?>
 	<center>
-	<h3>Artificial Intelligence: Heading Towards &quotCan Implies Ought&quot?</h3>
+	<h3>The Web: The Ultimate Medium</h3>
 	</center>
 	<p>If we conceptualize a medium as a means of communication, then the web is the most important medium ever created.  Nothing before has ever had the ability to connect with or influence so many aspects of billions of people.  The internet has become the main way that most people receive their external information and content, where most people get in touch with the world outside of their house.  There is almost nothing that can’t be learned by accessing the web, almost nothing that can’t be seen, bought, or sold.  A person can order food through the web, talk with someone across the world in an instant for no cost, etc.  At this point, the question isn’t what the web can do, but what it can’t do for the right consumer.</p>
 

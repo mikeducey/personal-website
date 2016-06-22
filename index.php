@@ -1,3 +1,4 @@
+<?php $thisPage="Home"; ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -5,26 +6,7 @@
 		<title>Michael Ducey's Personal Website</title>
 	</head>
 	<body>
-	<ul class="topnav">
-		<font size="1">
-		<h1>Pages</h1>
-			<font size="2">
-  		<li><p style="color:black;">Home</p></li>
-  		<li><a href="http://mikeducey.omahacodeschool.com/goals.html">Goals</a></li>
-  		<li><a href="http://mikeducey.omahacodeschool.com/gftrain.html">Just look at this guy: George Francis Train!</a></li>
-  		<font size="1">
-  		<h1>Articles</h1>
-			<font size="2">
-		<li><a href="http://mikeducey.omahacodeschool.com/articles/article-on-ai.html">Artificial Intelligence: Heading Towards &quotCan Implies Ought&quot?</a></li>
-		<li><a href="http://mikeducey.omahacodeschool.com/articles/web-as-medium.html">The Web: The Ultimate Medium</a></li>
-		<font size="1">
-		<h1>My profiles</h1>
-			<font size="2">
-		<li><a href="https://www.linkedin.com/in/michael-ducey-54077210a">LinkedIn</a></li>
-		<li><a href="https://github.com/mikeducey/">GitHub</a></li>
-		<a href=“michaeljducey@gmail.com”>Contact Me!</a>
-
-	</ul>
+	<?php include("navigation.php"); ?>
 	<center>
 	<img src="http://i.imgur.com/Vze63aq.jpg" style="width:512px;height:512px;">
 	<h3>Look at me and my awesome kid!!!</h3>
