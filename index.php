@@ -6,7 +6,11 @@
 		<title>Michael Ducey's Personal Website</title>
 	</head>
 	<body>
+	<div class="wrapper">
+	<div class="navigation">
 	<?php include("navigation.php"); ?>
+	</div>
+	<div class="main">
 	<center>
 	<img src="http://i.imgur.com/Vze63aq.jpg" style="width:512px;height:512px;">
 	<h3>Look at me and my awesome kid!!!</h3>
@@ -16,6 +20,8 @@
 
 	<p>In my spare time, I spend too much time on the internet. I suppose I like to play board games of many kinds, but with a young child, I feel like I haven't played them in forever. I have really come to enjoy Omaha in a new way since moving back, and my wife and I have engrossed ourselves in learning Omaha history. I drink too much coffee and not enough beer.</p>
 	</center>
+	</div>
+	</div>
 	</body>
 
 </html>
