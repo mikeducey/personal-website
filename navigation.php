@@ -1,6 +1,6 @@
 <DOCTYPE! html>
 <html>
-<div id="navigation">
+<div class="navigation">
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -31,3 +31,4 @@
 	</div>
 </body>
 </div>
+</html>
