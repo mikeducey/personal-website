@@ -8,9 +8,10 @@
 	</head>
 	<body>
 	<div class="wrapper">
-		<div class="navigation">
-		<?php include("navigation.php"); ?>
-		</div>
+			<div class="container">
+			<?php include("intro.php"); ?>
+			<?php include("navigation.php"); ?>
+			</div>
 	<div class="main">
 	<center>
 	<img src="http://i.imgur.com/Vze63aq.jpg" style="width:512px;height:512px;">

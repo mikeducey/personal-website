@@ -7,11 +7,12 @@
 		<title>Michael Ducey's Personal Website</title>
 	</head>
 	<body>
-		<div class="../wrapper">
-		<div class="../navigation">
-		<?php include("../navigation.php"); ?>
-		</div>
-		<div class="../main">
+	<div class="wrapper">
+			<div class="container">
+			<?php include("../intro.php"); ?>
+			<?php include("../navigation.php"); ?>
+			</div>
+	<div class="main">
 		<center>
 		<h3>Artificial Intelligence: Heading Towards &quotCan Implies Ought&quot?</h3>
 		</center>

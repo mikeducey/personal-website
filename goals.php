@@ -3,19 +3,21 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<title>Michael Ducey's Personal Website</title>
 	</head>
 	<body>
-		<div class="wrapper">
-		<div class="navigation">
-		<?php include("navigation.php"); ?>
-		</div>
-		<div class="main">
+	<div class="wrapper">
+			<div class="container">
+			<?php include("intro.php"); ?>
+			<?php include("navigation.php"); ?>
+			</div>
+	<div class="main">
 		<center>
 		<img src="http://i.imgur.com/SVX06A2.jpg" style="width:512px;height:384px;">
 		</center>
 		<h3>Professional Goals</h3>
-		<ul style="list-style-type:disc">
+		<ul>
   			<li>Complete the Omaha Code School course to my and my instructors' satisfaction</li>
   			<li>Learn the ropes of web development</li>
   			<li>Become a better networker</li>
@@ -23,7 +25,7 @@
 		</ul>
 
 		<h3>Personal Goals</h3>
-		<ul style="list-style-type:disc">
+		<ul>
   			<li>Finish my dissertation</li>
   			<li>Finally take a vacation to the mountains</li>
   			<li>Build a train table for my child</li>
