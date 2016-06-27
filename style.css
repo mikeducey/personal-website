@@ -1,5 +1,4 @@
 html, body {
-    height:100%;
     margin-left:0px;
     margin-right:0px;
     margin-top:0px;
@@ -10,21 +9,24 @@ body {
     background:#FAF2F8;
     border-width:0px;   
     border-style:none;
-}
-.wrapper {
+    min-height:100vh;
     display:-webkit-flex;
     display:flex;
-    position: relative;
+    min-height:100vh;
+
 }
 .container {
-    font-family: "Lucida Console", Monaco, monospace;
+    font-family: Tahoma, Geneva, sans-serif;
     flex-direction: column;*/
     justify-content: flex-start;
-    height: 100%;
+    min-height: 100vh;
     width:21%;
+/*    flex: 0 0 21%;*/
+    background-color: #FFDCD8;
+    color:#1A2B2B;
 }
 .intro {
-    background-color: #E2D9D8;    
+    background-color: #8F8F8F;    
     padding-top: 15px;
     padding-bottom: 15px;
     padding-top: 15px;
@@ -43,9 +45,10 @@ body {
     width:74%;
     flex-direction:row;
     justify-content:flex-end;
-    align-items:flex-start;
+/*    align-items:flex-start;*/
     padding-left: 10px;
     padding-right: 10px;
-
 }
-
+.center {
+    text-align: center;
+}

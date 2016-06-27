@@ -1,21 +1,9 @@
 <?php $thisPage="Goals"; ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Michael Ducey's Personal Website</title>
-	</head>
-	<body>
-	<div class="wrapper">
-			<div class="container">
-			<?php include("intro.php"); ?>
-			<?php include("navigation.php"); ?>
-			</div>
-	<div class="main">
-		<center>
-		<img src="http://i.imgur.com/SVX06A2.jpg" style="width:512px;height:384px;">
-		</center>
+<?php $title="Goals"; ?>
+<?php include("topmain.php"); ?>
+	<div class="center">
+		<img src="http://i.imgur.com/SVX06A2.jpg" alt="G with train table" style="width:512px;height:384px;">
+	</div>
 		<h3>Professional Goals</h3>
 		<ul>
   			<li>Complete the Omaha Code School course to my and my instructors' satisfaction</li>
@@ -31,10 +19,7 @@
   			<li>Build a train table for my child</li>
   			<li>Discover something new and important about Omaha's history</li>
   			<li>Get to reading the growing pile of books languishing on my reading shelf</li>
-
   		</ul>
-  		</div>
-  		</div>
+  </div>
 	</body>
-
 </html>

@@ -1,26 +1,16 @@
 <?php $thisPage="rps"; ?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="../style.css">
-		<title>Rock Paper Scissors</title>
-	</head>
-<body>
-	<div class="wrapper">
-			<div class="container">
-			<?php include("../intro.php"); ?>
-			<?php include("../navigation.php"); ?>
-			</div>
-	<div class="main">
-	<center>
+<?php $title="Rock Paper Scissors"; ?>
+<?php include("../topsubfolder.php"); ?>
+	<div class="center">
 	<form>
 	<p>Please enter rock, paper, or scissors in lowercase</p>
 	<input type="text" name="humanweapon">
 
 	<input type="submit">
 	</form>
+	</div>
 	<?php $humanweapon = $_GET["humanweapon"]; ?>
+	<?php $humanweapon = strtolower($humanweapon); ?>
 	<?php $rockpaperscissors = ['rock', 'paper', 'scissors'];
 	$rockpaperscissors = $rockpaperscissors[mt_rand(0, count($rockpaperscissors) - 1)]; ?>
 	<?php if ($humanweapon == "rock") {
@@ -48,6 +38,6 @@
 			echo "The computer chose $rockpaperscissors, you win!"; }
 		} 
 	?>
-	</center>
+	</div>
 </body>
 </html>
