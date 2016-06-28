@@ -2,7 +2,7 @@
 <?php $title="Michael Ducey's Personal Website"; ?>
 <?php include("topmain.php"); ?>
 	<div class="center">
-	<img src="http://i.imgur.com/Vze63aq.jpg" alt="Graham and Mike" style="width:512px;height:512px;">
+	<img src="gandme.jpg" alt="Graham and Mike" style="width:512px;height:512px;">
 	<h3>Look at me and my awesome kid!!!</h3>
 	<p>My name is Michael Ducey. I was born and raised in Omaha, and spent most of my life here. I left for graduate school about ten years ago, and lived in several places in the US: Lubbock, Cincinnati, and Willimantic, CT. I was trying to be a professional philosopher, and in some ways, I'm still trying. I'm working on my dissertation, which is about the interpretation of literature. I also do love to talk philosophy, but I try to warn people ahead of time so they are properly informed and can make an easy excuse to leave the conversation. For a variety of reasons, I have decided not to pursue an academic career in philosophy, or at least for the present time. My family moved back to Omaha last year, and  I was lucky enough to have some time being a stay-at-home dad to my toddler.</p>
 
