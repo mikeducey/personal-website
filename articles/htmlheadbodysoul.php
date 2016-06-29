@@ -1,0 +1,14 @@
+<?php $thisPage="Html, Head, Body, and Soul"; ?>
+<?php $title="Html, Head, Body, and Soul"; ?>
+<?php include("../topsubfolder.php"); ?>
+	<div class="center">
+		<h3>Html, Head, Body, and Soul</h3>
+	</div>
+	<p>The &lt;html&gt; tag will instruct the browser that is being used that the document is an html document. This tag is found near the top of the page, usually under the &lt;DOCTYPE!&gt; tag that also specifies the language to the browser.  So, while it does not specify the language, the &lt;html&gt; tag tells the browser that it is of a certain type of document.  The language that the document will be read in is specified above in &lt;DOCTYPE!&gt;.  The &lt;html&gt; tag will also omit php elements, which, in a php file type, can be placed at any point in the document.  The browser, when read through a server, can interpret php info and not have the need for it to be placed within the &lt;html> tag.  But, any information that is to be displayed, in both the body and in the head, will need to be placed within the &lt;html> tag.</p>  
+
+	<p>The &lt;head&gt; element contains all of the metadata for the page.  Any of the metadata that is placed here will not be displayed on the page (that will be reserved for the body).  This includes the title of the website, which will be displayed in the top of the browser window (and not visually within the page).  Another element found in the &lt;head&gt; would be the character set used.  The total set of characters that could possibly be found in the page needs to be specified, or else there could be characters not recognized.  This is another meta element.  Finally, another element found in the &lt;head&gt; would be the reference and link to the style sheet that is used to stylize the page.  Usually, this is just a link to the style css folder found elsewhere in the directory.  So, the style can be referenced and applied without having any visual indication of it being linked (as opposed to being found directly within the particular parts of the body, as was the case before CSS.</p>  
+
+	<p>Finally, the &lt;body&gt; tag is where all code is written that will appear in the actual page.  This is where input fields are placed so that information can be collected, where blocks of texts are entered within paragraphs.  Images are found here, and anything else that the programmer wants the user to interact with in the browser window.  Any longer, style is something that is typically omitted (due to the presence of the linked style sheet in the header), but once it has been interpreted through the server that the browser is connected to, style elements will be added and thus visually integrated in this body window.</p>
+	</div>
+	</body>
+</html>

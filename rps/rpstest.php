@@ -7,7 +7,7 @@
 echo "What happens when the human enters \"rock\"\n";
 rpslogic("rock", "rock");
 
-	if ("The computer chose $rockpaperscissors, you tie!") {
+	if ("The computer chose $compweapon, you tie!") {
 		echo "Success\n";
 	}
 	else {
@@ -17,7 +17,7 @@ rpslogic("rock", "rock");
 echo "What happens when the human enters \"PAPER\"\n";
 rpslogic("paper", "rock");
 
-	if ("The computer chose $rockpaperscissors, you win!")  {
+	if ("The computer chose $compweapon, you win!")  {
 		echo "Success\n";
 	}
 	else {

@@ -12,8 +12,8 @@
 	<?php $humanweapon = $_GET["humanweapon"]; ?>
 
 	<?php $humanweapon = humanchoicecase($humanweapon); ?>
-	<?php $rockpaperscissors = comprandom($rockpaperscissors); ?>
-	<?php echo rpslogic($humanweapon, $rockpaperscissors); ?>
+	<?php $compweapon = comprandom($compweapon); ?>
+	<?php echo rpslogic($humanweapon, $compweapon); ?>
 	</div>
 </body>
 </html>
