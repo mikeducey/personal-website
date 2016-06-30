@@ -6,8 +6,8 @@
 		<title><?php echo $title; ?></title>
 	</head>
 	<body>
-			<div class="container">
+		<div class="container">
 			<?php include("intro.php"); ?>
 			<?php include("navigation.php"); ?>
-			</div>
+		</div>
 	<div class="main">

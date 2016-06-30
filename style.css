@@ -25,6 +25,7 @@ body {
     background-color: #FFDCD8;
     color:#1A2B2B;
     font-size:90%;
+    list-style-type: none;
 }
 /*This is the top part of the navigation side, with the name and social links*/
 .intro {
@@ -49,15 +50,15 @@ body {
     width:74%;
     flex-direction:row;
     justify-content:flex-end;
-    padding-left: 10px;
+    padding-left: 30px;
     padding-right: 10px;
 }
 /*This just aligns whatever the div specifies as center*/
 .center {
     text-align: center;
 }
-/* test stuff for ttt */
-.tttwrapper{
+/* css stuff for ttt */
+.tttWrapper{
     color:black;
     background:#FAF2F8;
     display:flex;
@@ -66,23 +67,54 @@ body {
     justify-content:center;
     align-items:center;
 }
-.row{
-    display:flex;
+.tttTitle{
     justify-content:center;
-    border:5px black;
+    display:flex;
+    width: 340px;
+    height: 40px;
+    font-family:Helvetica;
+    background:#57B169;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:75%;
+}
+.tttRow{
+    display:flex;
+    border:5px  #3C7F4A;
     border-style:solid;
 }
-.cell{
-    color:black;
+.tttBox{
+    justify-content:center;
     display:flex;
     width: 100px;
     height: 100px;
-    font-family:Tahoma;
-    font-size:50px;
-    background:green;
-    border:5px black;
+    font-family:Helvetica;
+    background:#57B169;
+    border:5px  #3C7F4A;
     border-style:solid;
     justify-content:center;
     align-items:center;
+    color:white;
+    font-size:500%;
 }
-
+.tttBox__linkColor{
+    color:#57B169;
+    opacity: 0.5;
+    text-decoration:none;
+    display:inline-block;
+}
+.tttPlayAgain{
+    justify-content:center;
+    display:flex;
+    width: 340px;
+    height: 20px;
+    font-family:Helvetica;
+    background:#3C7F4A;
+    text-align:center;
+    font-size:100%;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    display:inline-block;
+}
