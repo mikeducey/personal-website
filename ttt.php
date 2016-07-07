@@ -1,12 +1,12 @@
+<?php session_start(); ?>
 <?php $thisPage="TTT"; ?>
 <?php $title="Tic Tac Toe"; ?>
 <?php include("topmain.php"); ?>
-<?php include("ttt_functions.php"); ?>
-<?php session_start(); ?>
+<?php include("tttfunctions_temp.php"); ?>
 
 <?php
     if($_GET["reset"]){
-        $_SESSION=null;
+        session_destroy();
     }
     if($_GET["move"]){
       $boardState = $_GET["move"];
@@ -14,15 +14,16 @@
     else{
       $boardState = "---------";
     }
+    if(empty($_SESSION)) {
+      $_SESSION["xwin"]=0;
+      $_SESSION["owin"]=0;
+      $_SESSION["draw"]=0;
+    }
     $turn = QueryStringCheck($boardState);
 ?>
 <div class = "tttWrapper">
   <div class = "tttTitle">
-  <h1>
-    <?php
-      CurrentBoard($boardState);
-    ?>
-  </h1>
+    <?php PrintBoardState($boardState); ?>
   </div>
   <div class = "tttRow">
     <div class = "tttBox">
@@ -58,19 +59,18 @@
     </div>
   </div>
     <div class = "tttPlayAgain">
-    <?php PlayAgain($boardState); ?>
+      <?php PlayAgain($boardState); ?>
     </div>
   <div class = "tttScoreBox">
     <div class = "tttScoreBox__Line">
-    <p><?php echo PrintScore($boardState)?></p>
+      <p>Player X Score: <?php echo PrintXScore($boardState)?></p>
     </div>
     <div class = "tttScoreBox__Line">
-    <p> you stink </p>
+      <p>Player O Score: <?php echo PrintOScore($boardState)?></p>
     </div>
     <div class = "tttScoreBox__Line">
-    <p> you stink </p>
+      <p>Draws: <?php echo PrintDraws($boardState)?></p>
     </div>
-
   </div> 
 </div> <!-- this is the end div for ttt wrapper  -->
 

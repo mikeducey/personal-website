@@ -14,8 +14,18 @@
 			<li><?php if ($thisPage=="Day 1 of Tic Tac Toe") { echo "<b>Day 1 of Tic Tac Toe</b>";} else { echo "<a href=\"/articles/day1ttt.php\">Day 1 of Tic Tac Toe</a>"; } ?></li>
 			<li><?php if ($thisPage=="Day 2 of Tic Tac Toe") { echo "<b>Day 2 of Tic Tac Toe</b>";} else { echo "<a href=\"/articles/day2ttt.php\">Day 2 of Tic Tac Toe</a>"; } ?></li>
 		</ul>
+			<div class = "center">
+			<form>
+			<select name="theme">
+				<option value="normal" <?php if($_GET["theme"] == "classic") { ?> selected <?php } ?> >Normal</option>
+				<option value="badtime" <?php if($_GET["theme"] == "badtime") { ?> selected <?php } ?> >Bad Time</option>
+			</select>
+			<input type="submit" name="submittheme">
+			</form>
+			</div>
 		<h1>Current Projects</h1>
 		<ul>
 			<li><?php if ($thisPage=="rps") { echo "<b>Rock/Paper/Scissors</b>";} else { echo "<a href=\"/rps/rps.php\">Rock/Paper/Scissors</a>"; } ?></li>
+			<li><?php if ($thisPage=="movie-css") {echo "<b>CSS Example Work</b>";} else {echo "<a href=\"/movie-css/moviesiteindex.php\">CSS Example Work</a>";} ?></li>
 		</ul>
 	</div>

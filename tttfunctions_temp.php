@@ -2,9 +2,10 @@
 	/*This is a function that prints a character on the board depending on the state of the game*/
 	function printSquare($move, $box, $turn){
 		if($move[$box]=="-"){
-			$turn = QueryStringCheck($move); 
-			if($turn=="xwins" or $turn == "owins") {
-				echo "-";	/*This makes sure no further moves can be entered after game is over */	
+			$checkwinner = QueryStringCheck($move);
+			$turn = changeturn($move);
+			if($checkwinner=="xwins" or $checkwinner == "owins") {
+				echo "-";	/*This makes sure no further moves can be entered after game is over.  This will have to check the new function when the new one is written! */	
 			}
 			else {
 				$move[$box] = $turn;
@@ -20,9 +21,9 @@
 	}	
 	/*This function checks for winning query strings, and if not updates the turn */
 	/*This seems to be pure method  but there is too much going on*/
-
 	function QueryStringCheck($move){
 		$winningCombinations = array("-","-","-","-","-","-","-","-");
+		$winner = "none";
 		$winningCombinations[0] = $move[0].$move[1].$move[2];
 		$winningCombinations[1] = $move[0].$move[4].$move[8];
 		$winningCombinations[2] = $move[0].$move[3].$move[6];
@@ -33,14 +34,23 @@
 		$winningCombinations[7] = $move[6].$move[7].$move[8];
 		foreach($winningCombinations as $wincondition){
 			if($wincondition=="xxx"){
-				return "xwins";
+				$winner = "xwins";
 			}
 			elseif($wincondition=="ooo"){
-				return "owins";
+				$winner = "owins";
 			}
 		}
-	/*this should be the end of it, ideally */
-		for($i=0; $i<9; $i++){ /*this will help change turns (see below) */
+		return $winner;
+	}
+	function checkForDraw($move) {
+		$draw = "no";
+		if (QueryStringCheck($move) == "none" and strpos($move, "-")===false){
+			$draw = "draw";
+		}
+		return $draw;
+	}
+	function changeTurn($move) {
+		for($i=0; $i<9; $i++){ 
 			if($move[$i]=="x"){
 				$X++;
 			}
@@ -48,43 +58,42 @@
 				$O++;
 			}
 		}
-		/*This has to go below the iterations for the moves, or else it automatically returns draw */
-		if(strpos($move, "-")===false){
-			return "draw"; /* this says if there is no string value of -, return a draw */
-			/* cannot be !==true, or else it will automatically return a draw, since it will have that be the case at the start of the code */
-		}
-		elseif($O<$X){
+		if($O<$X){
 			return "o"; /*This move will return "o" into query string for O's turn*/
 		}
 		else{
 			return "x"; /*This move will return "x" into query string for X's turn*/
 		}
 	}
+
 	/*This function updates the top bar (visually) with the state of the game: whose turn and who wins (if any) */
 	/*This function is about modifying the view */
 	function PrintBoardState($move){
-		$turn = QueryStringCheck($move); 
-		if($turn=="x"){
-			echo "X's turn"; 
+		$winningmove = QueryStringCheck($move);
+		$endgame = checkForDraw($move);
+		$turn = changeTurn($move);
+		if($winningmove=="xwins"){
+			echo "X Wins!";
+		}
+		elseif($winningmove=="owins"){
+			echo "O Wins!";
+		}
+		elseif($endgame=="draw"){
+			echo "It's a Draw";
+		}
+		elseif($turn=="x"){
+			echo "X's turn";  
 		}
 		elseif($turn=="o"){
 			echo "O's turn";
-		}
-		elseif($turn=="xwins"){
-			echo "X Wins!";
-		}
-		elseif($turn=="owins"){
-			echo "O Wins!";
-		}
-		elseif($turn=="draw"){
-			echo "It's a Draw";
 		}
 	}
 	/*This function pops up a link when the game is done to play another game */
 	/*A visual function that pops up a link to play the next game */
 	function PlayAgain($move){
 		$turn = QueryStringCheck($move); 
-		if($turn=="xwins" or $turn == "owins" or $turn == "draw"){
+		$endgame = checkForDraw($move);
+		if($turn=="xwins" or $turn == "owins" or $endgame == "draw"){
 			echo "<div class = \"tttPlayAgain__Text\"><a class = \"tttPlayAgain__Text--AnchorTag\" href=\"ttt.php?move=---------\">New Game</a></div>";
 			echo "<div class = \"tttPlayAgain__Text\"><a class = \"tttPlayAgain__Text--AnchorTag\" href=\"ttt.php?reset=true\">Reset Score</a></div>";
 		}
@@ -105,27 +114,10 @@
 	}
 	/*this function prints the total Draws */
 	function PrintDraws($move) {
- 		if (QueryStringCheck($move) == "draw") {
+ 		if (checkForDraw($move) == "draw") {
 			$_SESSION["draw"]++;
 			return $_SESSION["draw"];
 		}
-	}
-	/* combined game score tracker*/
-	function UpdateScore($move) {
-	    	if (QueryStringCheck($move)) {
-		 		if (QueryStringCheck($move) == draw) {
-					$_SESSION["draw"]++;
-					return $_SESSION["draw"];
-				}
-		 		if (QueryStringCheck($move) == owins) {
-					$_SESSION["owin"]++;
-					return $_SESSION["owin"];
-				}
-		 		if (QueryStringCheck($move) == xwins) {
-					$_SESSION["xwin"]++;
-					return $_SESSION["xwin"];
-				}			
-			}
 	}
 
 ?>
