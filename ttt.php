@@ -14,12 +14,8 @@
     else{
       $boardState = "---------";
     }
-    if(empty($_SESSION)) {
-      $_SESSION["xwin"]=0;
-      $_SESSION["owin"]=0;
-      $_SESSION["draw"]=0;
-    }
     $turn = QueryStringCheck($boardState);
+    sessionTracker()
 ?>
 <div class = "tttWrapper">
   <div class = "tttTitle">
@@ -63,10 +59,10 @@
     </div>
   <div class = "tttScoreBox">
     <div class = "tttScoreBox__Line">
-      <p>Player X Score: <?php echo PrintXScore($boardState)?></p>
+      <p>Player X Score: <?php printXScore() ?></p>
     </div>
     <div class = "tttScoreBox__Line">
-      <p>Player O Score: <?php echo PrintOScore($boardState)?></p>
+      <p>Player O Score: <?php printOScore() ?></p>
     </div>
     <div class = "tttScoreBox__Line">
       <p>Draws: <?php echo PrintDraws($boardState)?></p>

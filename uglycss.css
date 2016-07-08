@@ -1,0 +1,59 @@
+html, body {
+    margin-left:0px;
+    margin-right:0px;
+    margin-top:0px;
+    margin-bottom:0px;
+}
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background:#BDF849;
+    border-width:0px;   
+    border-style:none;
+    min-height:100vh;
+    display:-webkit-flex;
+    display:flex;
+    min-height:100vh;
+
+}
+/*This is the style for both parts on the navigation side of the page, both intro and the nav itself*/
+.container {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    flex-direction: column;*/
+    justify-content: flex-start;
+    min-height: 100vh;
+    width:45%;
+    background-color: #F6D6FF;
+    color:#1A2B2B;
+    font-size:90%;
+    list-style-type: none;
+}
+/*This is the top part of the navigation side, with the name and social links*/
+.intro {
+    background-color: #F974D7;    
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+.intro__icon {
+    background-color: #F974D7;
+    display:inline;
+}
+/*This is the style for the actual navigation of the side part of the page.*/
+.sidebar {
+    background-color: #F6D6FF;
+    padding-left: 2px;
+    padding-right: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+/*This is the style for the main part of the page (the part not in the sidebar navigation)*/
+.main {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    width:52%;
+    flex-direction:row;
+    justify-content:flex-end;
+    padding-left: 30px;
+    padding-right: 10px;
+}

@@ -1,6 +1,6 @@
-<?php if ($_GET["theme"] == "bad time") { ?>
-<link rel="stylesheet" type="text/css" href="/css/party.css">
+<?php if ($_GET["theme"] == "badtime") { ?>
+<link rel="stylesheet" type="text/css" href="uglycss.css">
 <?php } 
 else { ?>
-<link rel="stylesheet" type="text/css" href="/css/personal-website.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 <?php } ?>

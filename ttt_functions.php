@@ -109,23 +109,4 @@
 			$_SESSION["draw"]++;
 			return $_SESSION["draw"];
 		}
-	}
-	/* combined game score tracker*/
-	function UpdateScore($move) {
-	    	if (QueryStringCheck($move)) {
-		 		if (QueryStringCheck($move) == draw) {
-					$_SESSION["draw"]++;
-					return $_SESSION["draw"];
-				}
-		 		if (QueryStringCheck($move) == owins) {
-					$_SESSION["owin"]++;
-					return $_SESSION["owin"];
-				}
-		 		if (QueryStringCheck($move) == xwins) {
-					$_SESSION["xwin"]++;
-					return $_SESSION["xwin"];
-				}			
-			}
-	}
-
-?>
+	

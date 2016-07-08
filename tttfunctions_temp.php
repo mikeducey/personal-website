@@ -2,7 +2,7 @@
 	/*This is a function that prints a character on the board depending on the state of the game*/
 	function printSquare($move, $box, $turn){
 		if($move[$box]=="-"){
-			$checkwinner = QueryStringCheck($move);
+			$checkwinner = checkWinConditions($move);
 			$turn = changeturn($move);
 			if($checkwinner=="xwins" or $checkwinner == "owins") {
 				echo "-";	/*This makes sure no further moves can be entered after game is over.  This will have to check the new function when the new one is written! */	
@@ -18,10 +18,14 @@
 		elseif($move[$box]=="o"){
 			echo 'O';
 		}
-	}	
+	}
+	function incrementSessionCounter($whoIsTheWinner){
+		$_SESSION[$whoIsTheWinner]++;
+	}
+
 	/*This function checks for winning query strings, and if not updates the turn */
 	/*This seems to be pure method  but there is too much going on*/
-	function QueryStringCheck($move){
+	function checkWinConditions($move){
 		$winningCombinations = array("-","-","-","-","-","-","-","-");
 		$winner = "none";
 		$winningCombinations[0] = $move[0].$move[1].$move[2];
@@ -35,16 +39,34 @@
 		foreach($winningCombinations as $wincondition){
 			if($wincondition=="xxx"){
 				$winner = "xwins";
+				// incrementSessionCounter("xwins");
+				return $winner;
 			}
 			elseif($wincondition=="ooo"){
 				$winner = "owins";
+				// incrementSes÷sionCounter("owins");
+				return $winner;
 			}
 		}
-		return $winner;
 	}
+
+	function updateWinCounts($move){
+		$appleman = checkWinConditions($move);
+		$bananaman = checkForDraw($move);
+		if ($appleman == "xwins") {
+			incrementSessionCounter("xwins");		
+		}
+		elseif ($appleman == "owins") {
+			incrementSessionCounter("owins");
+		}
+		elseif ($bananaman == "draw") {
+			incrementSessionCounter("draw");
+		}
+	}
+
 	function checkForDraw($move) {
 		$draw = "no";
-		if (QueryStringCheck($move) == "none" and strpos($move, "-")===false){
+		if (checkWinConditions($move) == "none" and strpos($move, "-")===false){
 			$draw = "draw";
 		}
 		return $draw;
@@ -69,7 +91,7 @@
 	/*This function updates the top bar (visually) with the state of the game: whose turn and who wins (if any) */
 	/*This function is about modifying the view */
 	function PrintBoardState($move){
-		$winningmove = QueryStringCheck($move);
+		$winningmove = checkWinConditions($move);
 		$endgame = checkForDraw($move);
 		$turn = changeTurn($move);
 		if($winningmove=="xwins"){
@@ -91,33 +113,29 @@
 	/*This function pops up a link when the game is done to play another game */
 	/*A visual function that pops up a link to play the next game */
 	function PlayAgain($move){
-		$turn = QueryStringCheck($move); 
+		$turn = checkWinConditions($move); 
 		$endgame = checkForDraw($move);
 		if($turn=="xwins" or $turn == "owins" or $endgame == "draw"){
 			echo "<div class = \"tttPlayAgain__Text\"><a class = \"tttPlayAgain__Text--AnchorTag\" href=\"ttt.php?move=---------\">New Game</a></div>";
 			echo "<div class = \"tttPlayAgain__Text\"><a class = \"tttPlayAgain__Text--AnchorTag\" href=\"ttt.php?reset=true\">Reset Score</a></div>";
 		}
 	}
-	/*this function prints X's score */
-	function PrintXScore($move) {
- 		if (QueryStringCheck($move) == "xwins") {
-			$_SESSION["xwin"]++;
-			return $_SESSION["xwin"];
+
+	function sessionTracker() {
+		if ($_SESSION["xwins"] > 0 || $_SESSION["owins"] > 0 || $_SESSION["draw"] > 0) {
 		}
+		elseif (empty($_SESSION)) {
+	    	$_SESSION["xwins"]=0;
+	    	$_SESSION["owins"]=0;
+	    	$_SESSION["draw"]=0;
+	    }
 	}
-	/*this function prints O's score */
-	function PrintOScore($move) {
- 		if (QueryStringCheck($move) == "owins") {
-			$_SESSION["owin"]++;
-			return $_SESSION["owin"];
-		}
+	function printXScore() {
+		echo $_SESSION["xwins"];
 	}
-	/*this function prints the total Draws */
-	function PrintDraws($move) {
- 		if (checkForDraw($move) == "draw") {
-			$_SESSION["draw"]++;
-			return $_SESSION["draw"];
-		}
+	function printOScore() {
+		echo $_SESSION["owins"];
 	}
+
 
 ?>

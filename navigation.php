@@ -17,10 +17,10 @@
 			<div class = "center">
 			<form>
 			<select name="theme">
-				<option value="normal" <?php if($_GET["theme"] == "classic") { ?> selected <?php } ?> >Normal</option>
+				<option value="normal" <?php if($_GET["theme"] == "style") { ?> selected <?php } ?> >Normal</option>
 				<option value="badtime" <?php if($_GET["theme"] == "badtime") { ?> selected <?php } ?> >Bad Time</option>
 			</select>
-			<input type="submit" name="submittheme">
+			<input type="submit">
 			</form>
 			</div>
 		<h1>Current Projects</h1>
