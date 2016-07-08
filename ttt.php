@@ -14,8 +14,9 @@
     else{
       $boardState = "---------";
     }
-    $turn = QueryStringCheck($boardState);
-    sessionTracker()
+    $turn = checkWinConditions($boardState);
+    sessionTracker();
+    addToScore($boardState);
 ?>
 <div class = "tttWrapper">
   <div class = "tttTitle">
@@ -65,7 +66,7 @@
       <p>Player O Score: <?php printOScore() ?></p>
     </div>
     <div class = "tttScoreBox__Line">
-      <p>Draws: <?php echo PrintDraws($boardState)?></p>
+      <p>Draws: <?php printDraws() ?></p>
     </div>
   </div> 
 </div> <!-- this is the end div for ttt wrapper  -->

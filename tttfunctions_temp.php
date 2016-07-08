@@ -51,22 +51,22 @@
 	}
 
 	function updateWinCounts($move){
-		$appleman = checkWinConditions($move);
-		$bananaman = checkForDraw($move);
-		if ($appleman == "xwins") {
-			incrementSessionCounter("xwins");		
+		$awinner = checkWinConditions($move);
+		$nowinner = checkForDraw($move);
+		if ($awinner == "xwins") {
+			incrementSessionCounter("xwins");
 		}
-		elseif ($appleman == "owins") {
+		elseif ($awinner == "owins") {
 			incrementSessionCounter("owins");
 		}
-		elseif ($bananaman == "draw") {
+		elseif ($nowinner == "draw") {
 			incrementSessionCounter("draw");
 		}
 	}
 
 	function checkForDraw($move) {
 		$draw = "no";
-		if (checkWinConditions($move) == "none" and strpos($move, "-")===false){
+		if (strpos($move, "-")===false){
 			$draw = "draw";
 		}
 		return $draw;
@@ -101,13 +101,26 @@
 			echo "O Wins!";
 		}
 		elseif($endgame=="draw"){
-			echo "It's a Draw";
+			echo "It's a Draw";	
 		}
 		elseif($turn=="x"){
 			echo "X's turn";  
 		}
 		elseif($turn=="o"){
 			echo "O's turn";
+		}
+	}
+	function addToScore($move){
+		$winningmove = checkWinConditions($move);
+		$endgame = checkForDraw($move);
+		if($winningmove=="xwins"){
+			updateWinCounts($move);
+		}
+		elseif($winningmove=="owins"){
+			updateWinCounts($move);
+		}
+		elseif($endgame=="draw"){
+			updateWinCounts($move);			
 		}
 	}
 	/*This function pops up a link when the game is done to play another game */
@@ -136,6 +149,8 @@
 	function printOScore() {
 		echo $_SESSION["owins"];
 	}
-
+	function printDraws() {
+		echo $_SESSION["draw"];
+	}
 
 ?>
