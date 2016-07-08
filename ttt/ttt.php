@@ -1,12 +1,12 @@
 <?php session_start(); ?>
 <?php $thisPage="TTT"; ?>
 <?php $title="Tic Tac Toe"; ?>
-<?php include("topmain.php"); ?>
-<?php include("tttfunctions_temp.php"); ?>
+<?php include("ttttop.php"); ?>
+<?php include("tttfunctions.php"); ?>
 
 <?php
     if($_GET["reset"]){
-        session_destroy();
+        newSession();
     }
     if($_GET["move"]){
       $boardState = $_GET["move"];
@@ -20,7 +20,7 @@
 ?>
 <div class = "tttWrapper">
   <div class = "tttTitle">
-    <?php PrintBoardState($boardState); ?>
+    <?php printBoardState($boardState); ?>
   </div>
   <div class = "tttRow">
     <div class = "tttBox">
@@ -56,7 +56,7 @@
     </div>
   </div>
     <div class = "tttPlayAgain">
-      <?php PlayAgain($boardState); ?>
+      <?php playAgain($boardState); ?>
     </div>
   <div class = "tttScoreBox">
     <div class = "tttScoreBox__Line">

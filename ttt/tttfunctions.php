@@ -90,7 +90,7 @@
 
 	/*This function updates the top bar (visually) with the state of the game: whose turn and who wins (if any) */
 	/*This function is about modifying the view */
-	function PrintBoardState($move){
+	function printBoardState($move){
 		$winningmove = checkWinConditions($move);
 		$endgame = checkForDraw($move);
 		$turn = changeTurn($move);
@@ -125,13 +125,16 @@
 	}
 	/*This function pops up a link when the game is done to play another game */
 	/*A visual function that pops up a link to play the next game */
-	function PlayAgain($move){
+	function playAgain($move){
 		$turn = checkWinConditions($move); 
 		$endgame = checkForDraw($move);
 		if($turn=="xwins" or $turn == "owins" or $endgame == "draw"){
 			echo "<div class = \"tttPlayAgain__Text\"><a class = \"tttPlayAgain__Text--AnchorTag\" href=\"ttt.php?move=---------\">New Game</a></div>";
 			echo "<div class = \"tttPlayAgain__Text\"><a class = \"tttPlayAgain__Text--AnchorTag\" href=\"ttt.php?reset=true\">Reset Score</a></div>";
 		}
+	}
+	function newSession(){
+		$_SESSION=null;
 	}
 
 	function sessionTracker() {

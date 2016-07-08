@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<?php include "../themeswitch.php" ?>
+		<link rel="stylesheet" type="text/css" href="tttcss.css">
 		<title> <?php echo $title; ?></title>
 	</head>
 	<body>

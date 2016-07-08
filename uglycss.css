@@ -56,4 +56,5 @@ body {
     justify-content:flex-end;
     padding-left: 30px;
     padding-right: 10px;
+    filter: invert(100%);
 }

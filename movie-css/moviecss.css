@@ -1,0 +1,215 @@
+html, body {
+    margin:0px;
+}
+body {
+    background:white;
+    border-width:0px;   
+    border-style:none;
+    min-height:100vh;
+    display:-webkit-flex;
+    display:flex;
+    min-height:100vh;
+}
+/*This is the style for both parts on the navigation side of the page, both search bar and nav part*/
+.leftNavBar {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width:18%;
+    background-color: #111419;
+    color:white;
+    font-size:90%;
+}
+/*This is the top part, the search bar make div class for both img and text, center and make border instead if using underlining*/
+.search {
+    background-color: #BF5754;
+    width:100%;
+    height:6%;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.search__box {
+    display:flex;
+    justify-content:space-between;
+    width:140px;
+    padding-bottom: 2px;
+    border-bottom: 2px solid white;
+}
+.search__input {
+    background:transparent;
+    border:none;
+}
+::-webkit-input-placeholder {
+    color:white;
+    font-weight:lighter;
+    font-style: italic;
+}
+.search__icon {
+    position:relative;
+    top:2px;
+}
+/*This is the style for the actual navigation of the side part of the page.*/
+
+.l-navCategories{
+    padding-left:40px;
+    line-height: 1;
+}
+.navCategories {
+    font-family: "Open Sans", sans-serif;
+    color:#24272C;
+}
+.navListText {
+    font-family: "Open Sans", sans-serif;
+    color:white;
+    display: inline-block;
+    font-size:80%;
+    padding-left:40px;
+    line-height: 2.2;
+}
+.navListText li {
+    list-style-type:none;
+}
+.navListImg {
+    list-style-type: none;
+    display: inline-block;
+    vertical-align:left;
+    position:relative;
+    top:3px;
+}
+/*Main section div */
+.mainsection {
+    width:66%;
+    padding-left:25px;
+    padding-right:25px;
+}
+/*This is the title section block */
+.titleSection {
+    height:6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding-left:10px;
+    padding-right:10px;
+}
+.title {
+    font-family: "Open Sans", sans-serif;
+    color:black;
+    font-size:150%
+}
+.titleTabs {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.titleTabs__tab{
+    font-family: "Open Sans", sans-serif;
+    color:#B9BABE;
+    font-size:80%;
+}
+.titleTabs__tab--nonActiveTab {
+    color:#82BFC4;
+    display:inline;
+}
+.titleSection__icons {
+}
+.moviesection {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.movie {
+    padding-left:10px;
+    padding-right:10px;
+}
+.movie__titleText {
+    font-family: "Open Sans", sans-serif;
+    font-weight:bolder;
+    font-size:65%;
+    color:black;
+    margin-top:-10px;
+}
+.movie__infoText {
+    font-family: "Open Sans", sans-serif;
+    font-size:65%;
+    color:#B9BABE;
+    margin:0px;
+}
+/*This is the style for both parts on the right side of the page*/
+.rightNavBar {
+    flex-direction: column;
+    display:flex;
+    min-height: 100vh;
+    width:16%;
+    background-color: #999999;
+}
+.movieprofile {
+    height:6%;
+    background-color:#82BFC4;
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.movieprofile__img {
+    background-color: #82BFC4;
+    position:relative;
+    top:2px;
+}
+.movieprofile__name {
+    font-family: "Open Sans", sans-serif;
+    font-size: 80%;
+    color:white;
+    padding-right:30px;
+    margin-left:-15px;
+}
+.friends {
+    font-family: "Open Sans", sans-serif;
+    background-color: #EEEEEE;
+    line-height:1.6;
+    float:left;
+}
+.friends li {
+    list-style-type: none;
+}
+.friend_headers {
+    padding-left: 20px;
+    color:#24272C;
+    font-size:72%;
+    padding-top: 5px;
+}
+.friends__text {
+    color:black;
+    list-style-type: none;
+    display: inline-block;
+    font-size:72%;
+    padding-left: 20px;
+    padding-right:35px;
+    line-height:1.3;
+}
+.friends__movieText {
+    color:#999999;
+}
+.friends__img {
+    height:15px;
+    width:15px;
+    display: inline-block;
+    position:relative;
+    top:1px;
+    margin-left: -30px;
+}
+.friends__dot {
+    height:11px;
+    width:11px;
+    display: inline-block;
+    position:relative;
+    top:-13px;
+}
+.chatWith {
+    background-color: #999999;
+    width:100%;
+    height:6vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+

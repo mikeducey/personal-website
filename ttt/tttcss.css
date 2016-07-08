@@ -1,0 +1,84 @@
+.tttWrapper{
+    color:black;
+    background:#FAF2F8;
+    display:flex;
+    flex-flow:column;
+    padding:20px;
+    justify-content:center;
+    align-items:center;
+}
+.tttTitle{
+    justify-content:center;
+    display:flex;
+    width: 340px;
+    height: 40px;
+    font-family:Helvetica;
+    background:#57B169;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:120%;
+}
+.tttRow{
+    display:flex;
+    border:5px  #3C7F4A;
+    border-style:solid;
+}
+.tttBox{
+    justify-content:center;
+    display:flex;
+    width: 100px;
+    height: 100px;
+    font-family:Helvetica;
+    background:#57B169;
+    border:5px  #3C7F4A;
+    border-style:solid;
+    align-items:center;
+    color:white;
+    font-size:500%;
+}
+.tttBox__linkColor{
+    color:#57B169;
+    opacity: 0.5;
+    text-decoration:none;
+    display:inline-block;
+}
+.tttPlayAgain{
+    display:flex;
+    justify-content:space-between;
+    width: 340px;
+    height: 20px;
+    background:#3C7F4A;
+}
+.tttPlayAgain__Text{
+    background:#3C7F4A;
+    font-family:Helvetica;
+    font-size:100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    display: inline-block;
+}
+.tttPlayAgain__Text--AnchorTag{
+    text-decoration: none;
+    color:white;
+}
+.tttScoreBox{
+    justify-content:center;
+    display:flex;
+    width: 340px;
+    height: 200px;
+    background:#2B2726;
+    flex-direction: column;
+    align-items: center;
+}
+.tttScoreBox__Line{
+    justify-content:center;
+    display:flex;
+    width: 320px;
+    height: 30px;
+    padding-bottom: 5px;
+    background:#1C1C1A;
+    color:white;
+    border:5px  #2B2726;
+    border-style:solid;
