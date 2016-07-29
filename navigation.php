@@ -27,5 +27,6 @@
 		<ul>
 			<li><?php if ($thisPage=="rps") { echo "<b>Rock/Paper/Scissors</b>";} else { echo "<a href=\"/rps/rps.php\">Rock/Paper/Scissors</a>"; } ?></li>
 			<li><?php if ($thisPage=="movie-css") {echo "<b>CSS Example Work</b>";} else {echo "<a href=\"/movie-css/moviesiteindex.php\">CSS Example Work</a>";} ?></li>
+			<li><?php if ($thisPage=="converter") {echo "<b>Unit Converter</b>";} else {echo "<a href=\"/converter/index.php\">Unit Converter</a>";} ?></li>
 		</ul>
 	</div>
