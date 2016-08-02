@@ -13,6 +13,7 @@
 			<li><?php if ($thisPage=="Html, Head, Body, and Soul") { echo "<b>Html, Head, Body, and Soul</b>";} else { echo "<a href=\"/articles/htmlheadbodysoul.php\">Html, Head, Body, and Soul</a>"; } ?></li>
 			<li><?php if ($thisPage=="Day 1 of Tic Tac Toe") { echo "<b>Day 1 of Tic Tac Toe</b>";} else { echo "<a href=\"/articles/day1ttt.php\">Day 1 of Tic Tac Toe</a>"; } ?></li>
 			<li><?php if ($thisPage=="Day 2 of Tic Tac Toe") { echo "<b>Day 2 of Tic Tac Toe</b>";} else { echo "<a href=\"/articles/day2ttt.php\">Day 2 of Tic Tac Toe</a>"; } ?></li>
+			<li><?php if ($thisPage=="on_coding") { echo "<b>On Coding</b>";} else { echo "<a href=\"/articles/on-coding.php\">On Coding</a>"; } ?></li>
 		</ul>
 			<div class = "center">
 			<form>
